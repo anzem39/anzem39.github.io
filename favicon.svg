@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#030308"/>
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+        font-family="monospace" font-size="18" font-weight="700" fill="#8b5cf6">[</text>
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+        font-family="monospace" font-size="13" font-weight="700" fill="#f1f5f9" dx="2">a</text>
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+        font-family="monospace" font-size="18" font-weight="700" fill="#8b5cf6" dx="10">]</text>
+</svg>

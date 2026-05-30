@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anzem — Портфолио</title>
+    <meta name="description" content="Программист, студент 3-го курса. Пишу AI-ботов, инструменты и веб-проекты.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="reveal" id="reveal"></div>
+<div class="spotlight" id="spotlight"></div>
+<div class="cursor" id="cursor"></div>
+<div class="progress-bar" id="progress-bar"></div>
+<button class="back-top" id="back-top" title="Наверх" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-container">
+        <a href="#hero" class="nav-logo"><span class="lb">[</span>anzem<span class="lb">]</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about" class="nav-link">О себе</a></li>
+            <li><a href="#skills" class="nav-link">Стек</a></li>
+            <li><a href="#projects" class="nav-link">Проекты</a></li>
+            <li><a href="#contact" class="nav-link">Контакт</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="https://github.com/anzem39" target="_blank" rel="noopener" class="nav-github" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-glow-top"></div>
+    <div class="hero-glow-bottom"></div>
+
+    <div class="hero-content">
+        <div class="hero-tag" id="hero-tag">
+            <span class="tag-dot"></span>
+            студент · программист · создатель
+        </div>
+        <h1 class="hero-title" id="hero-title">
+            Привет, я <span class="gradient-text glitch-name" data-text="Anzem">Anzem</span>
+        </h1>
+        <div class="hero-typed-wrap" id="hero-typed-wrap">
+            <span class="t-prefix">// </span><span id="typed-out"></span><span class="t-cur">|</span>
+        </div>
+        <p class="hero-desc" id="hero-desc">
+            Пишу код с интересом к AI, автоматизации и красивым интерфейсам.<br>
+            3 курс университета. Без лейблов — пусть оценивают другие.
+        </p>
+        <div class="hero-cta" id="hero-cta">
+            <a href="#projects" class="btn btn-primary">Смотреть проекты <i class="fas fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-ghost">Написать мне</a>
+        </div>
+    </div>
+
+    <div class="hero-scroll" id="hero-scroll">
+        <span>scroll</span>
+        <div class="scroll-track"><div class="scroll-fill"></div></div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="s-label" data-aos="fade-up">01 // О себе</div>
+        <h2 class="s-title" data-aos="fade-up" data-aos-delay="60">Немного обо мне</h2>
+        <div class="about-grid">
+            <div class="about-text" data-aos="fade-right" data-aos-delay="120">
+                <p>Я студент <strong>3-го курса</strong>, и программирование для меня — не просто учёба,
+                а то, чем я занимаюсь каждый день. Пишу на <strong>Python</strong>,
+                делаю AI-ботов, автоматизирую рутину, создаю интерфейсы.</p>
+                <p>Параллельно разбираюсь в железе: разгон памяти, тюнинг видеокарт,
+                системная оптимизация Windows. Если что-то можно настроить лучше — настрою.</p>
+                <p>Не называю себя джуном или синьором — это не моё дело. Моё дело — <strong>делать</strong>.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-val gradient-text" data-count="3" data-suffix="">3</div>
+                        <div class="stat-lbl">курс</div>
+                    </div>
+                    <div class="stat-sep"></div>
+                    <div class="stat-item">
+                        <div class="stat-val gradient-text" data-count="4" data-suffix="+">4+</div>
+                        <div class="stat-lbl">проекта</div>
+                    </div>
+                    <div class="stat-sep"></div>
+                    <div class="stat-item">
+                        <div class="stat-val gradient-text" data-count="∞">∞</div>
+                        <div class="stat-lbl">кофе</div>
+                    </div>
+                </div>
+
+                <div class="now-block">
+                    <div class="now-label"><span class="now-pulse"></span>Сейчас работаю над</div>
+                    <div class="now-item">
+                        <span class="now-dot dot-purple"></span>
+                        <span>Grimoire v6 — обучение нейросети</span>
+                        <span class="now-tag">активно</span>
+                    </div>
+                    <div class="now-item">
+                        <span class="now-dot dot-cyan"></span>
+                        <span>Этот сайт — доработка портфолио</span>
+                        <span class="now-tag">скоро</span>
+                    </div>
+                    <div class="now-item">
+                        <span class="now-dot dot-dim"></span>
+                        <span>3 курс — сессия на горизонте</span>
+                        <span class="now-tag now-tag-warn">неизбежно</span>
+                    </div>
+                </div>
+            </div>
+            <div class="terminal" data-aos="fade-left" data-aos-delay="160">
+                <div class="term-header">
+                    <div class="term-dots">
+                        <span class="d d-r"></span><span class="d d-y"></span><span class="d d-g"></span>
+                    </div>
+                    <span class="term-title">anzem@dev:~$</span>
+                </div>
+                <div class="term-body">
+                    <div class="term-line"><span class="tp">$</span><span class="tc">whoami</span></div>
+                    <div class="term-out">anzem — программист, студент</div>
+                    <div class="term-line"><span class="tp">$</span><span class="tc">cat skills.txt</span></div>
+                    <div class="term-out">Python, AI/ML, OpenCV, ADB,<br>&nbsp;&nbsp;Web Dev, Google API...</div>
+                    <div class="term-line"><span class="tp">$</span><span class="tc">cat goal.txt</span></div>
+                    <div class="term-out">Делать крутые вещи.</div>
+                    <div class="term-line"><span class="tp">$</span><span class="tc tblink">█</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section section-alt">
+    <div class="container">
+        <div class="s-label" data-aos="fade-up">02 // Стек</div>
+        <h2 class="s-title" data-aos="fade-up" data-aos-delay="60">Технологии</h2>
+        <div class="skills-grid">
+            <div class="skill-cat" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-cat-label">Языки</div>
+                <div class="skill-items">
+                    <div class="skill-item" onclick="openSkill('python')"><i class="fab fa-python"></i><span>Python</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('js')"><i class="fab fa-js"></i><span>JavaScript</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('html')"><i class="fab fa-html5"></i><span>HTML / CSS</span><i class="fas fa-arrow-right ski"></i></div>
+                </div>
+            </div>
+            <div class="skill-cat" data-aos="fade-up" data-aos-delay="160">
+                <div class="skill-cat-label">AI / ML</div>
+                <div class="skill-items">
+                    <div class="skill-item" onclick="openSkill('ntuple')"><i class="fas fa-brain"></i><span>N-Tuple Networks</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('tdl')"><i class="fas fa-graduation-cap"></i><span>TD(λ) Learning</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('opencv')"><i class="fas fa-eye"></i><span>OpenCV</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('numpy')"><i class="fas fa-calculator"></i><span>NumPy</span><i class="fas fa-arrow-right ski"></i></div>
+                </div>
+            </div>
+            <div class="skill-cat" data-aos="fade-up" data-aos-delay="220">
+                <div class="skill-cat-label">Инструменты</div>
+                <div class="skill-items">
+                    <div class="skill-item" onclick="openSkill('adb')"><i class="fab fa-android"></i><span>ADB</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('git')"><i class="fab fa-github"></i><span>Git / GitHub</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('gapi')"><i class="fab fa-google"></i><span>Google APIs</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('tkinter')"><i class="fas fa-desktop"></i><span>tkinter (GUI)</span><i class="fas fa-arrow-right ski"></i></div>
+                </div>
+            </div>
+            <div class="skill-cat skill-cat-wide" data-aos="fade-up" data-aos-delay="280">
+                <div class="skill-cat-label">Железо</div>
+                <div class="skill-items skill-items-row">
+                    <div class="skill-item" onclick="openSkill('ramoc')"><i class="fas fa-memory"></i><span>RAM Overclocking</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('gputune')"><i class="fas fa-microchip"></i><span>GPU Tuning</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('winopt')"><i class="fab fa-windows"></i><span>Windows Optim.</span><i class="fas fa-arrow-right ski"></i></div>
+                    <div class="skill-item" onclick="openSkill('hwdiag')"><i class="fas fa-gauge-high"></i><span>HW Diagnostics</span><i class="fas fa-arrow-right ski"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INTERESTS -->
+<section id="interests" class="section">
+    <div class="container">
+        <div class="s-label" data-aos="fade-up">// Ещё немного</div>
+        <h2 class="s-title" data-aos="fade-up" data-aos-delay="60">Чем живу</h2>
+        <div class="interests-grid">
+            <div class="interest-card" data-aos="fade-up" data-aos-delay="80">
+                <div class="int-icon"><i class="fas fa-code"></i></div>
+                <h3>Код</h3>
+                <p>AI, автоматизация, красивые интерфейсы. Если задача интересная — могу залипнуть на сутки.</p>
+            </div>
+            <div class="interest-card" data-aos="fade-up" data-aos-delay="130">
+                <div class="int-icon"><i class="fas fa-microchip"></i></div>
+                <h3>Железо</h3>
+                <p>DDR5 разгон, GPU тюнинг, оптимизация Windows до последнего бита. Система должна работать максимально.</p>
+            </div>
+            <div class="interest-card" data-aos="fade-up" data-aos-delay="180">
+                <div class="int-icon"><i class="fas fa-gamepad"></i></div>
+                <h3>Игры</h3>
+                <p>Если играть — то с умом. Делаю ботов умнее себя, потом смотрю как они выигрывают.</p>
+            </div>
+            <div class="interest-card" data-aos="fade-up" data-aos-delay="230">
+                <div class="int-icon"><i class="fas fa-mug-hot"></i></div>
+                <h3>Кофе</h3>
+                <p>Неотъемлемая часть процесса. Без него код не компилируется.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <div class="container">
+        <div class="s-label" data-aos="fade-up">03 // Проекты</div>
+        <h2 class="s-title" data-aos="fade-up" data-aos-delay="60">Что я делал</h2>
+        <div class="projects-grid">
+
+            <div class="proj-card featured" data-aos="fade-up" data-aos-delay="100">
+                <div class="proj-glow"></div>
+                <div class="proj-top">
+                    <div class="proj-icon"><i class="fas fa-robot"></i></div>
+                    <span class="proj-status s-active">В разработке</span>
+                </div>
+                <h3 class="proj-name">Grimoire Bot</h3>
+                <p class="proj-short">AI-бот для автопрохождения 2048-подобной игры «Герой на полставки» через ADB и OpenCV</p>
+                <div class="proj-tags">
+                    <span class="tag">Python</span><span class="tag">AI/ML</span>
+                    <span class="tag">OpenCV</span><span class="tag">ADB</span><span class="tag">NumPy</span>
+                </div>
+                <button class="proj-btn" onclick="openProject(0)">Подробнее <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="proj-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="proj-glow"></div>
+                <div class="proj-top">
+                    <div class="proj-icon"><i class="fas fa-window-maximize"></i></div>
+                    <span class="proj-status s-done">Готов</span>
+                </div>
+                <h3 class="proj-name">Grimoire App</h3>
+                <p class="proj-short">Desktop-приложение с живым полем, 5 темами и статистикой сессий</p>
+                <div class="proj-tags">
+                    <span class="tag">Python</span><span class="tag">tkinter</span><span class="tag">NumPy</span>
+                </div>
+                <button class="proj-btn" onclick="openProject(1)">Подробнее <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="proj-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="proj-glow"></div>
+                <div class="proj-top">
+                    <div class="proj-icon"><i class="fas fa-brain"></i></div>
+                    <span class="proj-status s-active">Активно</span>
+                </div>
+                <h3 class="proj-name">Grimoire Training</h3>
+                <p class="proj-short">Система обучения N-Tuple сетей через TD(λ). Numba JIT, миллионы партий, веса до 154 MB</p>
+                <div class="proj-tags">
+                    <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Numba</span><span class="tag">TD(λ)</span>
+                </div>
+                <button class="proj-btn" onclick="openProject(2)">Подробнее <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="proj-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="proj-glow"></div>
+                <div class="proj-top">
+                    <div class="proj-icon"><i class="fas fa-table-cells"></i></div>
+                    <span class="proj-status s-done">Готов</span>
+                </div>
+                <h3 class="proj-name">Life Tracker</h3>
+                <p class="proj-short">Автоматизированный трекер в Google Sheets с кастомным меню — разворачивается одной командой</p>
+                <div class="proj-tags">
+                    <span class="tag">Python</span><span class="tag">Google API</span><span class="tag">Apps Script</span>
+                </div>
+                <button class="proj-btn" onclick="openProject(3)">Подробнее <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="proj-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="proj-glow"></div>
+                <div class="proj-top">
+                    <div class="proj-icon"><i class="fas fa-globe"></i></div>
+                    <span class="proj-status s-wip">В процессе</span>
+                </div>
+                <h3 class="proj-name">Веб-проекты</h3>
+                <p class="proj-short">Коллекция сайтов: от CRT-киберпанка до премиум glassmorphism-дизайна</p>
+                <div class="proj-tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                </div>
+                <button class="proj-btn" onclick="openProject(4)">Подробнее <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-alt">
+    <div class="container">
+        <div class="s-label" data-aos="fade-up">04 // Контакт</div>
+        <h2 class="s-title" data-aos="fade-up" data-aos-delay="60">Написать мне</h2>
+        <p class="contact-sub" data-aos="fade-up" data-aos-delay="100">Если есть вопрос, идея или предложение — пиши. Отвечу.</p>
+        <div class="contact-grid" data-aos="fade-up" data-aos-delay="160">
+            <a href="https://t.me/anzem1221" target="_blank" rel="noopener" class="contact-card">
+                <div class="cc-icon"><i class="fab fa-telegram"></i></div>
+                <div class="cc-info">
+                    <div class="cc-label">Telegram</div>
+                    <div class="cc-val">@anzem1221</div>
+                </div>
+                <i class="fas fa-arrow-right cc-arr"></i>
+            </a>
+            <a href="mailto:tiwnit.70@gmail.com" class="contact-card">
+                <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+                <div class="cc-info">
+                    <div class="cc-label">Email</div>
+                    <div class="cc-val">tiwnit.70@gmail.com</div>
+                </div>
+                <i class="fas fa-arrow-right cc-arr"></i>
+            </a>
+            <a href="https://github.com/anzem39" target="_blank" rel="noopener" class="contact-card">
+                <div class="cc-icon"><i class="fab fa-github"></i></div>
+                <div class="cc-info">
+                    <div class="cc-label">GitHub</div>
+                    <div class="cc-val">anzem39</div>
+                </div>
+                <i class="fas fa-arrow-right cc-arr"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo"><span class="lb">[</span>anzem<span class="lb">]</span></div>
+            <div class="footer-copy">Сделано с <span class="heart">♥</span> и Python</div>
+            <div class="footer-links">
+                <a href="https://t.me/anzem1221" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="https://github.com/anzem39" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:tiwnit.70@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeProject()">
+    <div class="modal" id="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeProject()" title="Закрыть"><i class="fas fa-times"></i></button>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
