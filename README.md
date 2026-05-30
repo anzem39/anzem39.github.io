@@ -1,24 +1,7 @@
-# anzem39.github.io
+# Portfolio
 
-Личный сайт-портфолио.
+Личный сайт. Без фреймворков — всё на ванильном HTML/CSS/JS.
 
-**Живой сайт:** https://anzem39.github.io
+https://anzem39.github.io
 
-## Стек
-
-- Vanilla HTML / CSS / JS — без фреймворков
-- GSAP — анимации при загрузке и scroll
-- AOS — анимации при скролле
-- Canvas API — анимация частиц в hero
-
-## Фичи
-
-- Page reveal при загрузке
-- Particle network на canvas с реакцией на курсор
-- Mouse spotlight
-- 3D tilt на карточках проектов
-- Magnetic кнопки
-- Glitch-эффект на имени
-- Модалки для проектов и скиллов
-- Scroll progress bar
-- Адаптивная вёрстка
+Из интересного: анимация частиц на canvas, 3D tilt на карточках, page reveal при загрузке, glitch-эффект на имени. GSAP для анимаций, AOS для скролла.
