@@ -925,6 +925,22 @@ ul { list-style:none; }
     margin-top:18px; padding-top:18px;
     border-top:1px solid var(--border);
 }
+.m-gh-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 16px;
+    padding: 10px 20px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: var(--r-s);
+    font-size: .875rem; font-weight: 600;
+    color: var(--text-m);
+    transition: all var(--tr);
+}
+.m-gh-btn:hover {
+    background: rgba(139,92,246,.12);
+    border-color: var(--primary);
+    color: var(--text);
+}
 
 /* ============================================================
    RESPONSIVE

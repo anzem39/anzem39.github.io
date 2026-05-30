@@ -4,6 +4,7 @@
 const PROJECTS = [
     {
         icon: 'fa-robot',
+        github: 'https://github.com/anzem39/grimoire',
         name: 'Grimoire Bot',
         status: { label: 'В разработке', cls: 's-active' },
         desc: 'Полностью автономный бот для прохождения событийной 2048-подобной мини-игры «Герой на полставки». Работает без участия пользователя — подключается к эмулятору, видит экран, думает, играет.',
@@ -39,6 +40,7 @@ const PROJECTS = [
     },
     {
         icon: 'fa-window-maximize',
+        github: 'https://github.com/anzem39/grimoire-app',
         name: 'Grimoire App',
         status: { label: 'Готов', cls: 's-done' },
         desc: 'Desktop-приложение для управления ботом и визуализации игрового процесса. Красивый интерфейс, 5 тем, статистика в реальном времени.',
@@ -95,6 +97,7 @@ const PROJECTS = [
     },
     {
         icon: 'fa-table-cells',
+        github: 'https://github.com/anzem39/life-tracker',
         name: 'Life Tracker',
         status: { label: 'Готов', cls: 's-done' },
         desc: 'Автоматизированный трекер задач и целей в Google Sheets. Разворачивается одной командой — таблица создаётся, меню появляется, триггеры ставятся.',
@@ -527,6 +530,12 @@ function openProject(i) {
         p.stats.map(st => `<div class="mst"><span>${st.value}</span><small>${st.label}</small></div>`).join('')
     }</div>` : '';
 
+    const ghBtn = p.github
+        ? `<a href="${p.github}" target="_blank" rel="noopener" class="m-gh-btn">
+               <i class="fab fa-github"></i> Открыть на GitHub
+           </a>`
+        : '';
+
     openModal(`
         <div class="m-header">
             <div class="m-icon"><i class="fas ${p.icon}"></i></div>
@@ -538,6 +547,7 @@ function openProject(i) {
         <p class="m-desc">${p.desc}</p>
         ${secs}${stats}
         <div class="m-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+        ${ghBtn}
     `);
 }
 
