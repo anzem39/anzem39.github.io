@@ -289,9 +289,12 @@ class ParticleNet {
     }
 
     loop() {
-        this.update(); this.draw();
-        requestAnimationFrame(() => this.loop());
+        if (!this.paused) { this.update(); this.draw(); }
+        this.raf = requestAnimationFrame(() => this.loop());
     }
+
+    pause() { this.paused = true; }
+    resume() { this.paused = false; }
 }
 
 /* ============================================================
@@ -768,11 +771,13 @@ function openModal(html) {
     document.getElementById('modal-body').innerHTML = html;
     document.getElementById('modal-overlay').classList.add('active');
     document.body.style.overflow = 'hidden';
+    if (window._particles) window._particles.pause();
 }
 
 function closeProject() {
     document.getElementById('modal-overlay').classList.remove('active');
     document.body.style.overflow = '';
+    if (window._particles) window._particles.resume();
 }
 
 /* ============================================================
@@ -806,7 +811,7 @@ function openSkill(key) {
    INIT
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
-    new ParticleNet(document.getElementById('hero-canvas'));
+    window._particles = new ParticleNet(document.getElementById('hero-canvas'));
 
     new Typer(document.getElementById('typed-out'), [
         'пишу AI-ботов',
