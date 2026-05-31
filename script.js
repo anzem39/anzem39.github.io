@@ -155,6 +155,43 @@ const PROJECTS = [
         tags: ['Tauri v2', 'Rust', 'React', 'TypeScript', 'winreg', 'Windows']
     },
     {
+        icon: 'fa-telegram',
+        github: 'https://github.com/anzem39/pc-monitor-bot',
+        name: 'PC Monitor Bot',
+        status: { label: 'Готов', cls: 's-done' },
+        desc: 'Telegram-бот для мониторинга железа через HWiNFO64 shared memory. Читает температуры, нагрузку и RAM прямо с сенсоров — без сторонних библиотек, только ctypes. Алерты с настраиваемыми порогами и cooldown\'ом.',
+        sections: [
+            {
+                title: 'Команды',
+                type: 'list',
+                items: [
+                    '<strong>/temps</strong> — CPU, GPU температуры с цветовой индикацией',
+                    '<strong>/load</strong> — нагрузка CPU, GPU, VRAM, RAM',
+                    '<strong>/all</strong> — всё сразу',
+                    '<strong>/alert add cpu_temp > 85</strong> — алерт по порогу',
+                    '<strong>/status</strong> — аптайм бота и статус HWiNFO'
+                ]
+            },
+            {
+                title: 'Как устроено',
+                type: 'list',
+                items: [
+                    'Читает HWiNFO64 shared memory напрямую через ctypes + OpenFileMappingW',
+                    'Разобрал бинарный формат SM2 для HWiNFO v8 (новая структура с тремя кодировками имён)',
+                    'Фоновый asyncio-цикл проверяет пороги каждые 10 секунд',
+                    'Бот отвечает только владельцу — остальных молча игнорирует',
+                    'Алерты хранятся в JSON, cooldown не даёт спамить'
+                ]
+            }
+        ],
+        stats: [
+            { value: '0', label: 'внешних либ для HWiNFO' },
+            { value: 'v8.40', label: 'HWiNFO формат' },
+            { value: 'async', label: 'архитектура' }
+        ],
+        tags: ['Python', 'aiogram 3', 'ctypes', 'HWiNFO64', 'asyncio', 'Windows']
+    },
+    {
         icon: 'fa-globe',
         name: 'Веб-проекты',
         status: { label: 'В процессе', cls: 's-wip' },
