@@ -117,6 +117,44 @@ const PROJECTS = [
         tags: ['Python', 'Google Sheets API', 'Google Drive API', 'Apps Script', 'gspread']
     },
     {
+        icon: 'fa-sliders',
+        github: 'https://github.com/anzem39/AnzemTweaker',
+        name: 'AnzemTweaker',
+        status: { label: 'Готов', cls: 's-done' },
+        desc: 'Персональный toolkit для пост-установки Windows. Устанавливает приложения, применяет твики реестра, запускает утилиты — всё из одного места. Написан на Tauri v2 (Rust + WebView2) с React-фронтендом.',
+        sections: [
+            {
+                title: 'Что умеет',
+                type: 'list',
+                items: [
+                    '<strong>Setup</strong> — установка базовых приложений через winget и ссылки',
+                    '<strong>GPU</strong> — DDU, Afterburner, AMD MoreClockTool / MorePowerTool',
+                    '<strong>Network</strong> — Realtek/Intel драйверы + отключение EEE и power saving',
+                    '<strong>Tweaks</strong> — твики реестра с тогглами и полным откатом',
+                    '<strong>Tools / Tests</strong> — HWiNFO64, Autoruns, TestMem5, Y-Cruncher',
+                    'Portable-режим через <code>portable.flag</code> рядом с exe',
+                    'Переключение языка EN/RU в настройках'
+                ]
+            },
+            {
+                title: 'Стек',
+                type: 'list',
+                items: [
+                    '<strong>Tauri v2</strong> — Rust бэкенд + WebView2, бинарник ~2 MB',
+                    '<strong>winreg</strong> crate — прямая работа с реестром из Rust',
+                    'React + TypeScript + Vite на фронте',
+                    'Lucide React иконки, glassmorphism тёмная тема'
+                ]
+            }
+        ],
+        stats: [
+            { value: '~2MB', label: 'размер installer' },
+            { value: 'Rust', label: 'бэкенд' },
+            { value: 'EN/RU', label: 'язык' }
+        ],
+        tags: ['Tauri v2', 'Rust', 'React', 'TypeScript', 'winreg', 'Windows']
+    },
+    {
         icon: 'fa-globe',
         name: 'Веб-проекты',
         status: { label: 'В процессе', cls: 's-wip' },
